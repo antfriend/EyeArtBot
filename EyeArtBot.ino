@@ -12,8 +12,6 @@
   int max_vertical = 70;
   
   int pos = 0;    // variable to store the servo position 
-  long randH;
-  long randV;
   
   void right_to_left()
   {
