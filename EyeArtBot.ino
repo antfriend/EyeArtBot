@@ -2,6 +2,8 @@
    
   Servo Eye_Horizontal;  // create servo object to control a servo 
   Servo Eye_Vertical; 
+  int vertical_servo = 6;
+  int horizontal_servo = 5;
   
   int min_horizontal = 30;
   int mid_horizontal = 90;
@@ -85,8 +87,8 @@
   { 
     Eye_Vertical.write(mid_vertical);
     Eye_Horizontal.write(mid_horizontal);
-    Eye_Horizontal.attach(1);  // attaches the servo on pin 9 to the servo object 
-    Eye_Vertical.attach(0);
+    Eye_Horizontal.attach(horizontal_servo);  // attaches the servo on pin 9 to the servo object 
+    Eye_Vertical.attach(vertical_servo);
     delay(100);
     randomSeed(analogRead(0));
     //StartSequence();    
@@ -161,9 +163,14 @@
   void loop() 
   { 
     //StartSequence();
-     RandomDelay();
-     RandomMiddling();
-     //RandomPosition();
+    //right_to_left();
+    //left_to_right();
+    //Look_Center();
+    delay(1000);
+    //RandomDelay();
+    RandomMiddling();
+    //delay(1000);
+    //RandomPosition(      );
     
   } 
 
